@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0f766e, #0ea5e9);
+            padding: 2.5rem 0;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #e0f2fe;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #bae6fd;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1e293b;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            animation: fadeIn 1s ease;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #7dd3fc;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-me {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .about-me img {
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 4px solid #0ea5e9;
+            transition: transform 0.3s ease;
+        }
+
+        .about-me img:hover {
+            transform: scale(1.05);
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .project {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .project h3 {
+            color: #e0f2fe;
+            margin-bottom: 0.5rem;
+        }
+
+        .project p {
+            color: #cbd5e1;
+        }
+
+        #contact {
+            background: #0f172a;
+            border-top: 1px solid #334155;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        #contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #1e293b;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-me {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Building Reliable Web Applications, One Line at a Time</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-me">
+            <img src="kabi photo.jpg" alt="Kabileish's Photo">
+            <p>
+                I'm <strong>Kabileish Sethu N.</strong>, a full-stack developer passionate about crafting scalable and efficient web applications. My toolbox includes React, Node.js, MongoDB, SQL, and clean code principles. I believe in problem-solving, performance, and learning something new every day. Whether it’s building interactive front-ends or architecting robust back-ends, I strive to create real impact through code.
+            </p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Smart India Hackathon</h3>
+                <p>Built a prototype to solve a real-world government problem using modern tech stacks under pressure.</p>
+            </div>
+            <div class="project">
+                <h3>Naan Mudhalvan</h3>
+                <p>Contributed to an upskilling initiative platform focused on dynamic learning modules and career readiness.</p>
+            </div>
+            <div class="project">
+                <h3>FreeCodeCamp Projects</h3>
+                <p>Completed multiple projects across front-end, back-end, and data visualization, certified by FCC.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:kabileishsethu@gmail.com">kabileishsethu@gmail.com</a></p>
+        <p>Phone: <a href="tel:+916382768900">+91 6382768900</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Kabileish Sethu. All rights reserved.</p>
+    </footer>
+</body>
+</html>
